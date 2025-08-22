@@ -5,5 +5,10 @@
 */
 
 :root.theme-dark {
- background-image: var(--bg-dark-mode);
+  --cover-image: url(/images/cover-image-dark.png);
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --accent-color-text: #000028;
+  --accent-color-shadow: #db00ff;
+  --color-text: #f1b2ce;
 }

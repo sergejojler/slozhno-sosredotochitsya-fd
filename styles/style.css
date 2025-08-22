@@ -1,9 +1,252 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-color: var(--bg-color-dark);
-  background-image: var(--bg-default);
-  background-position: center;
-  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+
+  /* font-size: var(--font-size); */
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  min-height: 100vh;
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.decorated-zone {
+  grid-column: 3;
+}
+
+/* .decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: var(--decoration-desktop);
+  bottom: var(--decoration-desktop);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--font-color-menu);
+} */
+
+/* .decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: var(--decoration-desktop);
+  top: var(--decoration-desktop);
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--font-color-menu);
+} */
+
+.decorated-zone-element {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--accent-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.decorated-zone-element::after {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 9px;
+  background: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  border-radius: 50%;
+}
+
+.header__theme-menu {
+  grid-column: 2;
+  grid-row: 1;
+}
+.header__theme-menu-list {
+}
+.header__theme-menu-item {
+}
+.header__theme-menu-button {
+}
+.header__theme-menu-button_type_light {
+}
+.header__theme-menu-button_active {
+}
+.header__theme-menu-button_type_auto {
+}
+.header__theme-menu-button_type_dark {
+}
+.header__title {
+  grid-column: 1 / 3;
+  grid-row: 2;
+  font-size: 157px;
+  font-weight: 700;
+  text-shadow: 4px 4px 0px var(--accent-color-shadow);
+}
+.header__subtitle {
+  grid-column: 2 / 4;
+  grid-row: 3;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--accent-color-text);
+  background: var(--accent-color);
+  justify-items: end;
+  align-items: center;
+  /* max-width: 491px;
+  max-height: 70px; */
+  line-height: 23.4px;
+}
+.main {
+  /* display: grid;
+  padding-top: 60px; */
+}
+.section {
+}
+.section--why-focus-hard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding-top: 60px;
+}
+.section__title {
+  grid-column: 1 / -3;
+  color: var(--accent-color);
+  font-size: 18px;
+}
+.article {
+  font-size: 18px;
+}
+.article--multitasking {
+  grid-column: 2;
+  grid-row: 1;
+}
+.article__title {
+  color: var(--accent-color-text);
+  background-color: var(--accent-color);
+}
+.article__text {
+  font-size: 18px;
+}
+.article--dopamine {
+  grid-column: 2;
+  grid-row: 2;
+}
+.section--focus-reducers {
+  display: grid;
+  grid-template-columns: minmax(auto, 315px) 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding-top: 80px;
+}
+
+.section--focus-reducers .section__title {
+  grid-column: 1;
+  grid-row: 1 / 2;
+}
+.article--multitask {
+  grid-row: 2 / 3;
+}
+.article--food {
+  grid-row: 2 / 3;
+}
+.article--gadgets {
+  grid-row: 2 / 3;
+}
+.section--focus-tips {
+  display: grid;
+  grid-template-columns: 315px 649px;
+  grid-template-rows: max-content minmax(244px);
+  gap: 20px;
+  padding-top: 80px;
+}
+
+.article--tips {
+  font-size: 18px;
+}
+.tip {
+}
+.tip--meditation {
+}
+.tip__title {
+  color: var(--accent-color-text);
+  font-size: 18px;
+  background-color: var(--accent-color);
+}
+.tip__text {
+}
+.tip--music {
+}
+.tip--walk {
+}
+.tip--nutrition {
+}
+.tip--reading {
+}
+.section--gallery {
+  padding-top: 80px;
+}
+
+/* .section--gallery--title {
+  grid-row: 1 / 4;
+  grid-column: 1; 
+}*/
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+}
+.gallery__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__image:has(.gallery__image--sunset) {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.gallery__image:has(.gallery__image--icecream) {
+  grid-column: 3;
+  grid-row: 1 / 3;
+}
+
+.gallery__image:has(.gallery__image--tape) {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
+
+.gallery__image:has(.gallery__image--books) {
+  grid-column: 2;
+  grid-row: 2 / 3;
+}
+
+.gallery__image:has(.gallery__image--street) {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  padding-top: 60px;
+}
+.footer__text {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 158px;
 }

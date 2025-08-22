@@ -3,13 +3,6 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font-family: "IBM Plex Mono", 'Open Sans', sans-serif;
-  --bg-color-dark: #000028;
-  --text-color: #000;
-  --bg-dark-mode: url(/images/cover-image-dark.png);
-  --bg-light-mode: url(/images/cover-image-light.png);
-  --bg-default: url(/images/cover-image.png);
-
-
-  
+  --font-family: "IBM Plex Mono", "Open Sans", sans-serif;
+  --font-size: 18px;
 }
