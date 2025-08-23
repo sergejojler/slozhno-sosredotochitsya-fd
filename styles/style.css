@@ -192,10 +192,6 @@
   font-size: var(--font-size);
 }
 
-.section__block-why-how .block_text {
-  margin-top: var(--block_text-margin-top);
-}
-
 .section__block-why-how .article {
   padding-right: var(--padding-desktop);
 }
@@ -237,7 +233,6 @@ section:nth-of-type(3) .block_text_subtitle {
 .block_text_title-pale {
   color: var(--font-color);
   background-color: var(--title-decor-color);
-  font-weight: 400;
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
