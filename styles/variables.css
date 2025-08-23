@@ -1,8 +1,44 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
-  --font-family: "IBM Plex Mono", "Open Sans", sans-serif;
+  --font-family: "IBM Plex Mono", Arial, Helvetica, sans-serif, monospace;
   --font-size: 18px;
+  --line-height: 23.4px;
+  --accent-color: var(--accent-color);
+  --font-color: var(--font-color);
+  --font-color-title: var(--font-color-title);
+  --font-text-color: var(--font-text-color);
+  --font-color-menu: var(--font-color-menu);
+  --font-color-menu-hover: var(--font-color-menu-hover);
+  --title-color: var(--title-color);
+  --title-decor-color: var(--title-decor-color);
+  --background-color: var(--background-color);
+  --background-image: var(--background-image);
+  --padding-desktop: 20px;
+  --padding-mobile: 10px;
+  --gap-desktop: 20px;
+  --gap-mobile: 10px;
+  --decoration-desktop: 20px;
+  --decoration-mobile: 10px;
+  --header-margin-bottom-desktop: 60px;
+  --header-margin-bottom-mobile: 40px;
+  --text-block-margin-bottom-desktop: 80px;
+  --text-block-margin-bottom-mobile: 50px;
+  --footer-margin-top-desktop: 60px;
+  --footer-margin-top-mobile: 40px;
+  --block_text-margin-top: 10px;
+  --block_text-margin-bottom: 20px;
+  --section_gap: 20px;
+  --inline_block-margin-top: 20px;
+  --logo-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+}
+
+@media (max-width: 769px) {
+  :root {
+    --logo-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+@media (max-width: 376px) {
+  :root {
+    --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
 }
